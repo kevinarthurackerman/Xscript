@@ -96,13 +96,12 @@ xscript.execute = async function (options) {
 
                 await settings.animations.positionBody.before($body);
                 $body.html(responseBody);
-                await settings.animations.positionBody.after($body);
-
-                $body.removeClass("modal-open");
-
                 if (oldXurlText !== newXurlText) {
                     history.pushState({}, $(newTitle).text(), newXurlText);
                 }
+                await settings.animations.positionBody.after($body);
+
+                $body.removeClass("modal-open");
 
                 await xscript.refreshContent($body);
             } else {

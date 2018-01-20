@@ -109,7 +109,7 @@ xscript.defaults = {
                 $body
                     .animate({
                         opacity: 0,
-                        speed: 'fast'
+                        duration: 100
                     });
                 return $body.promise();
             },
@@ -118,7 +118,7 @@ xscript.defaults = {
                     .animate({
                         opacity: 1,
                         queue: false,
-                        speed: 'fast'
+                        duration: 100
                     });
                 return $body.promise();
             }
@@ -136,7 +136,7 @@ xscript.defaults = {
                     .animate({
                         opacity: 1,
                         queue: false,
-                        speed: 'fast'
+                        duration: 100
                     });
                 return $content.promise();
             }
@@ -154,7 +154,7 @@ xscript.defaults = {
                     .animate({
                         opacity: 1,
                         queue: false,
-                        speed: 'fast'
+                        duration: 100
                     });
                 return $content.promise();
             }
@@ -172,7 +172,7 @@ xscript.defaults = {
                     .animate({
                         opacity: 1,
                         queue: false,
-                        speed: 'fast'
+                        duration: 100
                     });
                 return $content.promise();
             }
@@ -190,7 +190,7 @@ xscript.defaults = {
                     .animate({
                         opacity: 1,
                         queue: false,
-                        speed: 'fast'
+                        duration: 100
                     });
                 return $content.promise();
             }
@@ -204,7 +204,7 @@ xscript.defaults = {
                     .animate({
                         opacity: 0,
                         queue: false,
-                        speed: 'fast'
+                        duration: 100
                     });
                 return $targets.promise();
             },
@@ -214,7 +214,7 @@ xscript.defaults = {
                     .animate({
                         opacity: 1,
                         queue: false,
-                        speed: 'fast'
+                        duration: 100
                     });
                 return $content.promise();
             }
@@ -224,7 +224,7 @@ xscript.defaults = {
                 $targets
                     .animate({
                         opacity: 0,
-                        speed: 'fast'
+                        duration: 100
                     });
                 return $targets.promise();
             },
@@ -233,7 +233,7 @@ xscript.defaults = {
                     .animate({
                         opacity: 1,
                         queue: false,
-                        speed: 'fast'
+                        duration: 100
                     });
                 return $targets.promise();
             }
@@ -244,7 +244,7 @@ xscript.defaults = {
                     .animate({
                         opacity: 0,
                         queue: false,
-                        speed: 'fast'
+                        duration: 100
                     });
                 return $targets.promise();
             },
@@ -352,13 +352,12 @@ xscript.execute = async function (options) {
 
                 await settings.animations.positionBody.before($body);
                 $body.html(responseBody);
-                await settings.animations.positionBody.after($body);
-
-                $body.removeClass("modal-open");
-
                 if (oldXurlText !== newXurlText) {
                     history.pushState({}, $(newTitle).text(), newXurlText);
                 }
+                await settings.animations.positionBody.after($body);
+
+                $body.removeClass("modal-open");
 
                 await xscript.refreshContent($body);
             } else {
