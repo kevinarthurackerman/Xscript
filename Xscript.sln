@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xscript", "Xscript\Xscript.csproj", "{E78871FA-03CE-462A-A4A9-49C458893EEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xscript.Core", "Xscript.Core\Xscript.Core.csproj", "{E78871FA-03CE-462A-A4A9-49C458893EEA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xscript.Assets", "XScript.Assets\Xscript.Assets.csproj", "{0A11B692-48ED-49EC-8508-7017B5C9648E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{E78871FA-03CE-462A-A4A9-49C458893EEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E78871FA-03CE-462A-A4A9-49C458893EEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E78871FA-03CE-462A-A4A9-49C458893EEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A11B692-48ED-49EC-8508-7017B5C9648E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A11B692-48ED-49EC-8508-7017B5C9648E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A11B692-48ED-49EC-8508-7017B5C9648E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A11B692-48ED-49EC-8508-7017B5C9648E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

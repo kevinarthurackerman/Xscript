@@ -1,0 +1,103 @@
+﻿// Configure bundling and minification for the project.
+// More info at https://go.microsoft.com/fwlink/?LinkId=808241
+[
+  {
+    "outputFileName": "dist/bootstrap.css",
+    "inputFiles": [
+      "bower_components/bootstrap/dist/css/bootstrap.css"
+    ],
+    "sourceMap": true
+  },
+  {
+    "outputFileName": "dist/bootstrap.min.css",
+    "inputFiles": [
+      "bower_components/bootstrap/dist/css/bootstrap.min.css"
+    ],
+    "sourceMap": true
+  },
+  {
+    "outputFileName": "dist/bootstrap.js",
+    "inputFiles": [
+      "bower_components/bootstrap/dist/js/bootstrap.js"
+    ]
+  },
+  {
+    "outputFileName": "dist/bootstrap.min.js",
+    "inputFiles": [
+      "bower_components/bootstrap/dist/js/bootstrap.min.js"
+    ]
+  },
+  {
+    "outputFileName": "dist/loadingoverlay.js",
+    "inputFiles": [
+      "bower_components/gasparesganga-jquery-loading-overlay/src/loadingoverlay.js"
+    ]
+  },
+  {
+    "outputFileName": "dist/loadingoverlay.min.js",
+    "inputFiles": [
+      "bower_components/gasparesganga-jquery-loading-overlay/src/loadingoverlay.min.js"
+    ]
+  },
+  {
+    "outputFileName": "dist/jquery.js",
+    "inputFiles": [
+      "bower_components/jquery/dist/jquery.js"
+    ]
+  },
+  {
+    "outputFileName": "dist/jquery.min.js",
+    "inputFiles": [
+      "bower_components/jquery/dist/jquery.min.js"
+    ]
+  },
+  {
+    "outputFileName": "dist/jquery.validate.js",
+    "inputFiles": [
+      "bower_components/jquery-validation/dist/jquery.validate.js"
+    ]
+  },
+  {
+    "outputFileName": "dist/jquery.validate.min.js",
+    "inputFiles": [
+      "bower_components/jquery-validation/dist/jquery.validate.min.js"
+    ]
+  },
+  {
+    "outputFileName": "dist/jquery.validate.unobtrusive.js",
+    "inputFiles": [
+      "bower_components/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    ]
+  },
+  {
+    "outputFileName": "dist/jquery.validate.unobtrusive.min.js",
+    "inputFiles": [
+      "bower_components/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    ]
+  },
+  {
+    "outputFileName": "dist/xscript.js",
+    "inputFiles": [
+      "xscript.ajaxExtensions.js",
+      "xscript.core.js",
+      "xscript.defaults.js",
+      "xscript.execute.js",
+      "xscript.refreshContent.js"
+    ]
+  },
+  {
+    "outputFileName": "dist/xscript.min.js",
+    "inputFiles": [
+      "xscript.ajaxExtensions.js",
+      "xscript.core.js",
+      "xscript.defaults.js",
+      "xscript.execute.js",
+      "xscript.refreshContent.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]
