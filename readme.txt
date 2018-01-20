@@ -1,4 +1,4 @@
-﻿supported attributes:
+supported attributes:
 
 xref="url" -   When added to an element, it becomes an href, but will get the content with AJAX, and insert it into the page.
                Any content with a body tag will replace the current page's body tag and close any xmodals that are open.
