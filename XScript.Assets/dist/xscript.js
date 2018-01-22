@@ -456,7 +456,7 @@ xscript.refreshContent = async function ($content) {
 
     $('[xtargets]').removeAttr("xtargets");
 
-    $xrefs.filter("[xprecache]").each(async function (i, e) {
+    $xrefs.filter("[xfetch='eager']").each(async function (i, e) {
         var $e = $(e);
 
         await xscript.execute({
@@ -471,9 +471,9 @@ xscript.refreshContent = async function ($content) {
     $('[xsrc]').each(async function (i, e) {
         var $e = $(e);
         var ttl = $e.attr("xttl");
-        var precache = e.hasAttribute("xprecache")
+        var fetch = $e.attr("xfetch").toLowerCase() === "eager";
 
-        if (ttl === undefined || ttl === null || precache) {
+        if (ttl === undefined || ttl === null || fetch) {
             await xscript.execute({
                 url: $e.attr("xsrc"),
                 dataSelector: $e.attr("xdata"),
@@ -481,8 +481,12 @@ xscript.refreshContent = async function ($content) {
                 timeout: 0,
                 processResult: (ttl === undefined || ttl === null)
             });
-            $e.removeAttr("xsrc");
-            $e.removeAttr("precache");
+
+            $e.removeAttr("xfetch");
+            if (ttl > 0) {
+            } else {
+                $e.removeAttr("xsrc");
+            }
         } else {
             var interval = window.setInterval(async function () {
                 if (document.contains(e)) {
@@ -491,7 +495,7 @@ xscript.refreshContent = async function ($content) {
                         dataSelector: $e.attr("xdata"),
                         blockUi: false,
                         timeout: ttl,
-                        processResult: !precache
+                        processResult: !fetch
                     });
                 } else {
                     window.clearInterval(interval);
