@@ -1,0 +1,1 @@
+Implement lazy caching keyword for xfetch attribute
