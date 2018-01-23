@@ -7,7 +7,12 @@ namespace Xscript.Core
 {
     public static class IApplicationBuilderExtensions
     {
-        public static IApplicationBuilder UseXScript(this IApplicationBuilder appBuilder)
+        /// <summary>
+        /// Registers the embedded file provider for Xscript capabilities
+        /// </summary>
+        /// <param name="appBuilder"></param>
+        /// <returns></returns>
+        public static IApplicationBuilder UseXscript(this IApplicationBuilder appBuilder)
         {
             appBuilder.UseStaticFiles(new StaticFileOptions()
             {

@@ -1,1 +1,4 @@
-Implement lazy caching keyword for xfetch attribute
+Lazy caching keyword for xfetch attribute
+Auto-ordering elements
+Auto-submitting input elements when focus lost
+Tie value of input/text fields together by name attribute

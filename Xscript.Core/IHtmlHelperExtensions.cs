@@ -7,6 +7,13 @@ namespace Xscript.Core
 {
     public static class IHtmlHelperExtensions
     {
+        /// <summary>
+        /// Inserts Xscript sources into the page HTML to pull in required files
+        /// </summary>
+        /// <param name="htmlHelper"></param>
+        /// <param name="httpContext"></param>
+        /// <param name="configureOptions"></param>
+        /// <returns></returns>
         public static IHtmlContent XScriptTags(
             this IHtmlHelper htmlHelper, 
             HttpContext httpContext,
