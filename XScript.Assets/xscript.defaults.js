@@ -21,21 +21,10 @@ xscript.defaults = {
     animations: {
         positionBody: {
             before: function ($body) {
-                $body
-                    .animate({
-                        opacity: 0,
-                        duration: 100
-                    });
-                return $body.promise();
+                return Promise.resolve();
             },
             after: function ($body) {
-                $body
-                    .animate({
-                        opacity: 1,
-                        queue: false,
-                        duration: 100
-                    });
-                return $body.promise();
+                return Promise.resolve();
             }
         },
         positionBefore: {

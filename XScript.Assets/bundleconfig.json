@@ -94,11 +94,10 @@
       "xscript.execute.js",
       "xscript.refreshContent.js"
     ],
-    // enable minification when NUglify begins supporting async/await operators
-    //"minify": {
-    //  "enabled": true,
-    //  "renameLocals": true
-    //},
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
     "sourceMap": false
   }
 ]

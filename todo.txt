@@ -2,3 +2,5 @@ Lazy caching keyword for xfetch attribute
 Auto-ordering elements
 Auto-submitting input elements when focus lost
 Tie value of input/text fields together by name attribute
+Use broadcast channel to send content updates to all browser tabs
+Fix race condition bug with settimeout to prevent memory leak

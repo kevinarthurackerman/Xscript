@@ -22,7 +22,7 @@ xscript.refreshContent = async function ($content) {
     $('[xsrc]').each(async function (i, e) {
         var $e = $(e);
         var ttl = $e.attr("xttl");
-        var fetch = $e.attr("xfetch").toLowerCase() === "eager";
+        var fetch = ($e.attr("xfetch") || "").toLowerCase() === "eager";
 
         if (ttl === undefined || ttl === null || fetch) {
             await xscript.execute({
